@@ -20,7 +20,7 @@ class detailBook extends Component {
     
       getResumeData(){
         $.ajax({
-          url:'/resumeData.json',
+          url:'../public/resumeData.json',
           dataType:'json',
           cache: false,
           success: function(data){
@@ -59,11 +59,11 @@ class detailBook extends Component {
         }
 
         const gallery_wrap_img_small_wrap_img ={
-            // 'max-width': "100%",
-            // 'max-height': "100%",
-            // 'object-fit': "cover",
-            // 'border-radius': "4px",
-            // 'cursor': "zoom-in",
+            'max-width': "100%",
+            'max-height': "100%",
+            'object-fit': "cover",
+            'border-radius': "4px",
+            'cursor': "zoom-in",
         }
 
 

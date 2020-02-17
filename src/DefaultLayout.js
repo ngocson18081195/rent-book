@@ -6,9 +6,8 @@ import Footer from './Components/Footer';
 import About from './Components/About';
 import Resume from './Components/Resume';
 import Contact from './Components/Contact';
-import Testimonials from './Components/Testimonials';
+import Testimonials from './Components/Products/Testimonials';
 import Portfolio from './Components/Portfolio';
-
 class DefaultLayout extends Component {
     constructor(props){
         super(props);
@@ -24,7 +23,7 @@ class DefaultLayout extends Component {
     
       getResumeData(){
         $.ajax({
-          url:'/resumeData.json',
+          url:'../public/resumeData.json',
           dataType:'json',
           cache: false,
           success: function(data){
