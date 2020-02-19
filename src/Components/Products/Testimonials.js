@@ -6,12 +6,11 @@ class Testimonials extends Component {
 
       if (this.props.data) {
          var testimonials = this.props.data.projects.map(function (testimonials) {
-            console.log(testimonials);
-            return <figure>
+            return <figure key={testimonials.id}>
                <img src={testimonials.image} />
                <figcaption>{testimonials.title}</figcaption>
-               <span class="price">{testimonials.price}</span>
-               <a class="button" href="#">Buy Now</a>
+               <span className="price">{testimonials.price}</span>
+               <a className="button" href="#">Buy Now</a>
             </figure>
 
             {/* <img src={testimonials.image} class="img-responsive" />
@@ -50,7 +49,7 @@ class Testimonials extends Component {
 
 
                   <div id="wrap">
-                     <div id="columns" class="columns_4">
+                     <div id="columns" className="columns_4">
                         {/* <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive" />
                      <div class="producttitle">Product 2</div>
                      <div class="productprice">

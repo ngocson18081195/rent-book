@@ -1,29 +1,20 @@
 import React, { Component } from 'react';
-<<<<<<< .mine
 import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
-import DefaultLayout from './DefaultLayout';
+// import DefaultLayout from './DefaultLayout';
 import routes from './routes.js';
-const loading = () => <div className="animated fadeIn pt-3 text-center">Loading...</div>;
 
-
-
-
-
-
-
-=======
-import ReactGA from 'react-ga';
+// import ReactGA from 'react-ga';
 import $ from 'jquery';
 import './App.css';
-import Footer from './Components/Footer';
-import About from './Components/About';
-import Resume from './Components/Resume';
-import Contact from './Components/Contact';
-import Portfolio from './Components/Portfolio';
-import Header from './Components/Header/Header';
-import Testimonials from './Components/Products/Testimonials';
+// import Footer from './Components/Footer';
+// import About from './Components/About';
+// import Resume from './Components/Resume';
+// import Contact from './Components/Contact';
+// import Portfolio from './Components/Portfolio';
+// import Header from './Components/Header/Header';
+// import Testimonials from './Components/Products/Testimonials';
 
->>>>>>> .theirs
+const loading = () => <div className="animated fadeIn pt-3 text-center">Loading...</div>;
 class App extends Component {
 
   constructor(props){
