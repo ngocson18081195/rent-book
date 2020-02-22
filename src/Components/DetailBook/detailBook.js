@@ -4,6 +4,11 @@ import ReactGA from 'react-ga';
 import $ from 'jquery';
 import Footer from '../Footer';
 import Contact from '../Contact.js';
+import './detailBook.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import Axios from 'axios';
+import Testimonials from '../Products/Testimonials';
+let slideIndex = 0
 
 class detailBook extends Component {
     constructor(props){
@@ -18,78 +23,100 @@ class detailBook extends Component {
     
       }
     
-      getResumeData(){
-        $.ajax({
-          url:'../public/resumeData.json',
-          dataType:'json',
-          cache: false,
-          success: function(data){
-            this.setState({resumeData: data});
-          }.bind(this),
-          error: function(xhr, status, err){
-            console.log(err);
-            alert(err);
-          }
-        });
+      getResumeData(thisSelf) {
+        Axios.get(`./resumeData.json`).then(function (respone) {
+            thisSelf.setState({ resumeData: respone.data });
+        }).catch(function (error) {
+          console.log(error);
+        }).then (function () {
+          // Always exected
+        })
+        // $.ajax({
+        //   url: '../',
+        //   dataType: 'json',
+        //   cache: false,
+        //   success: function (data) {
+        //     console.log(data);
+            
+        //     this.setState({ resumeData: data });
+        //   }.bind(this),
+        //   error: function (xhr, status, err) {
+        //     console.log(err);
+        //     alert(err);
+        //   }
+        // });
       }
     
       componentDidMount(){
-        this.getResumeData();
+        // this.getResumeData();
       }
     render() {
-
-        const img_big_wrap_img ={
-            height: "450px",
-            width: "auto",
-            display: "inline-block",
-            cursor: "zoom-in",
-        }
-
-        const img_big_wrap_item_gallery ={
-            width: "60px",
-            height: "60px",
-            border: "1px solid #ddd",
-            margin: "7px 2px",
-            display: "inline-block",
-            overflow: "hidden"
-        }
-
-        const gallery_wrap_img_small_wrap ={
-            "text-align": "center"
-        }
-
-        const gallery_wrap_img_small_wrap_img ={
-            'max-width': "100%",
-            'max-height': "100%",
-            'object-fit': "cover",
-            'border-radius': "4px",
-            'cursor': "zoom-in",
-        }
-
-
-
-
         return (
-            <div className="container">
-                <div className="card">
-                    <div className="row">
-                        <aside className="col-sm-5 border-right">
-                            <article className="gallery-wrap"> 
-                                <div className="img-big-wrap">
-                                    <div> <a href="#"><img style={img_big_wrap_img} src="https://image.shutterstock.com/image-photo/beautiful-water-drop-on-dandelion-260nw-789676552.jpg"/></a></div>
-                                <div className="img-small-wrap" style={gallery_wrap_img_small_wrap}>
-                                    <div className="item-gallery" style={gallery_wrap_img_small_wrap_img}> <img style={img_big_wrap_item_gallery} src="https://image.shutterstock.com/image-photo/beautiful-water-drop-on-dandelion-260nw-789676552.jpg"/> </div>
-                                    <div className="item-gallery" style={gallery_wrap_img_small_wrap_img}> <img style={img_big_wrap_item_gallery} src="https://image.shutterstock.com/image-photo/beautiful-water-drop-on-dandelion-260nw-789676552.jpg"/> </div>
-                                    <div className="item-gallery" style={gallery_wrap_img_small_wrap_img}> <img style={img_big_wrap_item_gallery} src="https://image.shutterstock.com/image-photo/beautiful-water-drop-on-dandelion-260nw-789676552.jpg"/> </div>
-                                    <div className="item-gallery" style={gallery_wrap_img_small_wrap_img}> <img style={img_big_wrap_item_gallery} src="https://image.shutterstock.com/image-photo/beautiful-water-drop-on-dandelion-260nw-789676552.jpg"/> </div>
-                                </div>
-                                </div>
-                            </article>
-                        </aside>
-                    </div>  
-                </div>
-            </div>
-        );
+        
+        <div className="App">
+            {/* <Header data={this.state.resumeData.main} /> */}
+		<div className="card">
+			<div className="">
+				<div className=" row">
+					<div className="preview col-md-7">
+                        <div className="slider">
+                            {/* start imgae background default */}
+                            <img className="imgBook" src="http://placekitten.com/400/252" checked="checked"/>
+                            {/* end imgae background default */}
+                            
+                            <input type="radio" name="slide_switch" id="id1" />
+                            <label htmlFor="id1">
+                                <img src="http://placekitten.com/400/252" width="100"/>
+                            </label>
+                            <img className="imgBook" src="http://placekitten.com/400/252"/>
+	
+                            <input type="radio" name="slide_switch" id="id2"/>
+                            <label htmlFor ="id2">
+                                <img src="http://placekitten.com/400/253" width="100"/>
+                            </label>
+                            <img className="imgBook" src="http://placekitten.com/400/253"/>
+	
+                            <input type="radio" name="slide_switch" id="id3"/>
+                            <label htmlFor ="id3">
+                                <img src="http://placekitten.com/400/254" width="100"/>
+                            </label>
+                            <img className="imgBook" src="http://placekitten.com/400/254"/>
+	
+                            <input type="radio" name="slide_switch" id="id4"/>
+                            <label htmlFor ="id4">
+                                <img src="http://placekitten.com/400/255" width="100"/>
+                            </label>
+                            <img className="imgBook" src="http://placekitten.com/400/255"/>
+	
+                        </div>
+					</div>
+					<div className="details col-md-5">
+						<h3 className="product-title">Tàn Khốc Mới Là Thanh Xuân</h3>
+						<div className="rating">
+							<div className="stars">
+								<span className="fa fa-star checked"></span>
+								<span className="fa fa-star checked"></span>
+								<span className="fa fa-star checked"></span>
+								<span className="fa fa-star"></span>
+								<span className="fa fa-star"></span>
+							</div>
+							<span className="review-no">41 reviews</span>
+						</div>
+						<p className="product-description">Từ xưa tới nay người thế gian cũng thường dùng những lời tốt đẹp nhất để ca ngợi thanh xuân. Nhưng thanh xuân có lúc không như vậy, luôn có rắn độc nấp sau những khóm hoa diễm lệ. Cho nên thanh xuân cũng có mặt tàn khốc của nó – áp lực công việc, niềm bất an trong tình cảm, cảm giác vô định trong cuộc sống, sự đả kích của thất bại, nỗi cô đơn ấm ức khi bị lừa gạt… Những điều đấy đã khiến các bạn trẻ không tìm được phương hướng, thậm chí còn gây ra các hành vi rất cực đoan..</p>
+						<h4 className="price">Giá cho thuê: <span>$180</span></h4>
+						<div className="action">
+							<button className="add-to-cart  btn-default" type="button">Đặt Thuê</button>
+							<button className="like btn-default" type="button"><span className="fa fa-heart"></span></button>
+						</div>
+					</div>
+				</div> 
+			</div>
+		</div>
+        <Testimonials data={this.state.resumeData.portfolio} />
+        {/* <Contact data={this.state.resumeData.main} /> */}
+        <Footer data={this.state.resumeData.main} />
+	</div>
+    );
     }
 }
 

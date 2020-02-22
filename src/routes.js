@@ -5,10 +5,10 @@ const DefaultLayout = React.lazy(() => import('./DefaultLayout.js'));
 const Testimonials = React.lazy(() => import('./Components/Products/Testimonials.js'));
 
 const routes = [
-  { path: '/product/detail', name: 'detailEbook', component:  detailEbook},
+  { path: '/product/detail/', name: 'detailEbook', component:  detailEbook},
   { path: '/', name: 'home', component:  DefaultLayout},
   { path: '/abcd', name: 'home', component:  Resume},
-  // { path: '/products', name: 'product', component:  Testimonials},
+  { path: '/products', name: 'product', component:  Testimonials},
 
 ];
 
