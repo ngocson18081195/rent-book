@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./products.css";
+import { Link } from 'react-router-dom';
 
 class Testimonials extends Component {
    render() {
@@ -10,7 +11,9 @@ class Testimonials extends Component {
                <img src={testimonials.image} />
                <figcaption>{testimonials.title}</figcaption>
                <span className="price">{testimonials.price}</span>
-               <a className="button" href="#">Buy Now</a>
+               <Link to="/product/detail">
+                  <span className="button" href="/p/">Buy Now</span>
+               </Link>
             </figure>
 
             {/* <img src={testimonials.image} class="img-responsive" />
