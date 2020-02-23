@@ -4,11 +4,15 @@ import { withStyles } from '@material-ui/core';
 import ChildHeader from './ChildHeader/ChildHeader.js';
 
 class Header extends Component {
+
+   constructor() {
+      super();
+   }
+
    render() {
       const { classes } = this.props;
-
       return (
-         <header id="home">
+         <header id="home" className={classes.heigthHeader}>
 
             <nav id="nav-wrap">
 
@@ -25,9 +29,6 @@ class Header extends Component {
                </ul>
 
             </nav>
-
-            <ChildHeader data={this.props.data}></ChildHeader>
-
          </header>
       );
    }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from '../Header';
 import ReactGA from 'react-ga';
 import Footer from '../Footer';
 import Contact from '../Contact.js';
@@ -7,6 +6,7 @@ import './detailBook.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Axios from 'axios';
 import Testimonials from '../Products/Testimonials';
+import Header from '../Header/Header';
 
 class detailBook extends Component {
   constructor(props) {

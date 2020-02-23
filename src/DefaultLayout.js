@@ -9,6 +9,7 @@ import Testimonials from './Components/Products/Testimonials';
 // import Portfolio from './Components/Portfolio';
 import Header from './Components/Header/Header';
 import axios from 'axios';
+import ChildHeader from './Components/Header/ChildHeader/ChildHeader';
 class DefaultLayout extends Component {
   constructor(props) {
     super(props);
@@ -53,6 +54,7 @@ class DefaultLayout extends Component {
     return (
       <div className="App">
         <Header data={this.state.resumeData.main} />
+        <ChildHeader data={this.state.resumeData.main}></ChildHeader>
         {/* <About data={this.state.resumeData.main}/> */}
         {/* <Resume data={this.state.resumeData.resume}/> */}
         {/* <Portfolio data={this.state.resumeData.portfolio}/> */}

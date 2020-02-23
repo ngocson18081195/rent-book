@@ -77,6 +77,11 @@ const styles = theme => ({
     },
     'btnSearch:hover' : {
         background: '#2d62d3'
+    },
+    heigthHeader: {
+        maxHeight: 'calc(100vh - 550px) !important',
+        minHeight: 'calc(100vh - 550px) !important'
+
     }
 });
 
