@@ -54,21 +54,21 @@ class detailBook extends Component {
         return (
         
         <div className="App">
-            {/* <Header data={this.state.resumeData.main} /> */}
+            <Header data={this.state.resumeData.main} />
 		<div className="card">
 			<div className="">
 				<div className=" row">
 					<div className="preview col-md-7">
                         <div className="slider">
                             {/* start imgae background default */}
-                            <img className="imgBook" src="http://placekitten.com/400/252" checked="checked"/>
+                            <img className="imgBook" src="http://placekitten.com/400/259" checked="checked"/>
                             {/* end imgae background default */}
                             
                             <input type="radio" name="slide_switch" id="id1" />
                             <label htmlFor="id1">
-                                <img src="http://placekitten.com/400/252" width="100"/>
+                                <img src="http://placekitten.com/400/259" width="100"/>
                             </label>
-                            <img className="imgBook" src="http://placekitten.com/400/252"/>
+                            <img className="imgBook" src="http://placekitten.com/400/259"/>
 	
                             <input type="radio" name="slide_switch" id="id2"/>
                             <label htmlFor ="id2">
@@ -113,7 +113,7 @@ class detailBook extends Component {
 			</div>
 		</div>
         <Testimonials data={this.state.resumeData.portfolio} />
-        {/* <Contact data={this.state.resumeData.main} /> */}
+        <Contact data={this.state.resumeData.main} />
         <Footer data={this.state.resumeData.main} />
 	</div>
     );
