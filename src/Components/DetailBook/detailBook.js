@@ -59,32 +59,32 @@ class detailBook extends Component {
               <div className="preview col-md-7">
                 <div className="slider">
                   {/* start imgae background default */}
-                  <img className="imgBook" src="http://placekitten.com/400/259" checked="checked" />
+                  <img alt="" className="imgBook" src="http://placekitten.com/400/259" checked="checked" />
                   {/* end imgae background default */}
 
                   <input type="radio" name="slide_switch" id="id1" />
                   <label htmlFor="id1">
-                    <img src="http://placekitten.com/400/259" width="100" />
+                    <img alt="" src="http://placekitten.com/400/259" width="100" />
                   </label>
-                  <img className="imgBook" src="http://placekitten.com/400/259" />
+                  <img alt="" className="imgBook" src="http://placekitten.com/400/259" />
 
                   <input type="radio" name="slide_switch" id="id2" />
                   <label htmlFor="id2">
-                    <img src="http://placekitten.com/400/253" width="100" />
+                    <img alt="" src="http://placekitten.com/400/253" width="100" />
                   </label>
-                  <img className="imgBook" src="http://placekitten.com/400/253" />
+                  <img alt="" className="imgBook" src="http://placekitten.com/400/253" />
 
                   <input type="radio" name="slide_switch" id="id3" />
                   <label htmlFor="id3">
-                    <img src="http://placekitten.com/400/254" width="100" />
+                    <img alt="" src="http://placekitten.com/400/254" width="100" />
                   </label>
-                  <img className="imgBook" src="http://placekitten.com/400/254" />
+                  <img alt="" className="imgBook" src="http://placekitten.com/400/254" />
 
                   <input type="radio" name="slide_switch" id="id4" />
                   <label htmlFor="id4">
-                    <img src="http://placekitten.com/400/255" width="100" />
+                    <img alt="" src="http://placekitten.com/400/255" width="100" />
                   </label>
-                  <img className="imgBook" src="http://placekitten.com/400/255" />
+                  <img alt="" className="imgBook" src="http://placekitten.com/400/255" />
 
                 </div>
               </div>

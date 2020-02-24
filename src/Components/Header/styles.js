@@ -12,7 +12,6 @@ const styles = theme => ({
     },
     s01: {
         minHeight: '100vh',
-        display: '-ms-flexbox',
         display: 'flex',
         msFlexPack: 'center',
         justifyContent: 'center',
@@ -63,7 +62,6 @@ const styles = theme => ({
         marginBottom: '3%'
     },
     btnSearch: {
-        fontSize: '16px',
         height: '100%',
         width: '100%',
         background: '#4272d7',
@@ -79,8 +77,8 @@ const styles = theme => ({
         background: '#2d62d3'
     },
     heigthHeader: {
-        maxHeight: 'calc(100vh - 550px) !important',
-        minHeight: 'calc(100vh - 550px) !important'
+        maxHeight: 'calc(100vh - 530px) !important',
+        minHeight: 'calc(100vh - 530px) !important'
 
     }
 });
